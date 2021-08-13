@@ -1,0 +1,53 @@
+<br><br>
+<div class="forum-container">
+
+
+<form [formGroup]="customerForm" novalidate>
+
+  <ion-item lines="full">
+    <ion-label position="floating">First Name</ion-label>
+    <ion-input formControlName="firstName" type="text" ></ion-input>
+  </ion-item>
+  <ion-item lines="full">
+    <ion-label position="floating">Last Name</ion-label>
+    <ion-input formControlName="LastName" type="text" ></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">Email</ion-label>
+    <ion-input formControlName="email" type="email" ></ion-input>
+  </ion-item>
+
+  <ion-item lines="full">
+    <ion-label position="floating">DOB</ion-label>
+    <ion-datetime formControlName="dob" min="1900" max="2019"></ion-datetime>
+  </ion-item>
+
+
+    <ion-list radio-group formControlName="gender">
+    <ion-list-header>
+      Select your gender
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Male</ion-label>
+      <ion-radio value="en-US"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Female</ion-label>
+      <ion-radio value="es-US"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-item lines="full">
+    <ion-label position="floating">Mobile</ion-label>
+    <ion-input formControlName="mobile" type="text" ></ion-input>
+  </ion-item>
+
+  <ion-row>
+    <ion-col>
+      <ion-button type="submit" color="danger" expand="block">Submit</ion-button>
+    </ion-col>
+  </ion-row>
+</form>
+</div>

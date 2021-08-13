@@ -1,0 +1,56 @@
+<ion-scroll class="scrollVertically">
+  <ion-grid>
+    <ion-row>
+      <div>
+
+
+        <ion-searchbar showCancelButton="never" placeholder="Sort by User ID" class="search-bar"
+          [(ngModel)]="listFilter"></ion-searchbar>
+        <h1 class="heading">
+          Post from Employee
+        </h1>
+        <br>
+        <div>
+          <h2>
+            Filtered by: {{listFilter}}
+          </h2>
+
+        </div>
+
+        <br>
+        <div *ngFor="let post of posts" class="postContainer">
+
+
+          <div class="post-matter">
+            <h3>Title: {{post.title}}</h3>
+
+            <ion-row>
+              Posted by: {{post.userId}}
+
+            </ion-row>
+            <br>
+            <ion-row>
+              Post Number: {{post.id}}
+            </ion-row>
+            <br>
+
+            <ion-row class="body-matter">
+              {{post.body}}
+            </ion-row>
+
+
+          </div>
+          <br>
+          <br>
+        </div>
+
+
+
+      </div>
+
+
+    </ion-row>
+
+  </ion-grid>
+
+</ion-scroll>
